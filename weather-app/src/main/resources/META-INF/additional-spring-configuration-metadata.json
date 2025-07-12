@@ -1,0 +1,32 @@
+{"properties": [
+  {
+    "name": "weather.api.url",
+    "type": "java.lang.String",
+    "description": "A description for 'weather.api.url'"
+  },
+  {
+    "name": "weather.geo.api.url",
+    "type": "java.lang.String",
+    "description": "A description for 'weather.geo.api.url'"
+  },
+  {
+    "name": "weather.geo.api.params",
+    "type": "java.lang.String",
+    "description": "A description for 'weather.geo.api.params'"
+  },
+  {
+    "name": "weather.api.params.current",
+    "type": "java.lang.String",
+    "description": "A description for 'weather.api.params.current'"
+  },
+  {
+    "name": "weather.api.params.daily",
+    "type": "java.lang.String",
+    "description": "A description for 'weather.api.params.daily'"
+  },
+  {
+    "name": "weather.api.params.hourly",
+    "type": "java.lang.String",
+    "description": "A description for 'weather.api.params.hourly'"
+  }
+]}

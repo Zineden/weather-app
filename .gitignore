@@ -1,10 +1,15 @@
+# Docs
 HELP.md
-target/
+
+# Maven wrapper
 !.mvn/wrapper/maven-wrapper.jar
+
+# Maven targets
+target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+# Spring Tool Suite (STS)
 .apt_generated
 .classpath
 .factorypath
@@ -13,21 +18,37 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
+# IntelliJ IDEA
+.idea/
 *.iws
 *.iml
 *.ipr
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
+
+# Build folders
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
+# VS Code
 .vscode/
+
+# Frontend dependencies and build
+frontend/node_modules/
+frontend/build/
+
+# OS generated files
+.DS_Store
+
+# Java build files
+backend/target/
+*.class
+
+# Environment variables
+*.env
