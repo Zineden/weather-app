@@ -83,7 +83,7 @@ npm run build
 ## Demonstration
 
 <p align="center">
-![weather-app-demo](https://github.com/user-attachments/assets/180df64b-fbbe-40b1-b5ca-2ef2db861ddb)
+<img src="https://github.com/user-attachments/assets/180df64b-fbbe-40b1-b5ca-2ef2db861ddb">
 </p>
 
 ## Notes
