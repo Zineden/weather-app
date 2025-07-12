@@ -82,6 +82,9 @@ npm run build
 
 ## Demonstration
 
+![weather-app-demo](https://github.com/user-attachments/assets/180df64b-fbbe-40b1-b5ca-2ef2db861ddb)
+
+
 ## Notes
 
 - API URL and keys should be managed via environment variables for security.
