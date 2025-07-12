@@ -1,15 +1,45 @@
-# Docs
-HELP.md
+# -----------------
+# General
+# -----------------
+.DS_Store
+*.env
 
-# Maven wrapper
+# -----------------
+# Frontend (React + Node)
+# -----------------
+frontend/node_modules/
+frontend/build/
+
+# -----------------
+# Backend (Spring Boot / Java)
+# -----------------
+backend/target/
+backend/*.class
+
+# Maven wrapper jar (important to keep)
 !.mvn/wrapper/maven-wrapper.jar
 
-# Maven targets
+# Maven build directories (ignore all target folders except source folders' exceptions)
 target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-# Spring Tool Suite (STS)
+# Maven build directories (build folders)
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# -----------------
+# IDEs
+# -----------------
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse / STS
 .apt_generated
 .classpath
 .factorypath
@@ -18,12 +48,6 @@ target/
 .springBeans
 .sts4-cache
 
-# IntelliJ IDEA
-.idea/
-*.iws
-*.iml
-*.ipr
-
 # NetBeans
 /nbproject/private/
 /nbbuild/
@@ -31,24 +55,5 @@ target/
 /nbdist/
 /.nb-gradle/
 
-# Build folders
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
 # VS Code
 .vscode/
-
-# Frontend dependencies and build
-frontend/node_modules/
-frontend/build/
-
-# OS generated files
-.DS_Store
-
-# Java build files
-backend/target/
-*.class
-
-# Environment variables
-*.env
