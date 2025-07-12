@@ -56,4 +56,4 @@ build/
 /.nb-gradle/
 
 # VS Code
-.vscode/
+.vscode/weather-app-react/
