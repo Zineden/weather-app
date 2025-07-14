@@ -8,6 +8,7 @@ RUN npm install && npm run build
 FROM eclipse-temurin:17-jdk AS backend
 WORKDIR /app
 COPY weather-app/ .
+ENV MAVEN_OPTS="-Xmx512m"
 RUN ./mvnw package -DskipTests
 
 # ----------- Final image -----------
