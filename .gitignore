@@ -1,8 +1,9 @@
 # -----------------
 # General
 # -----------------
-.DS_Store
+*.DS_Store
 *.env
+*.log
 
 # -----------------
 # Frontend (React + Node)
@@ -56,3 +57,10 @@ build/
 /.nb-gradle/
 
 # VS Code
+
+# Ignore local build artifacts
+weather-app/target/
+weather-app-react/build/
+
+# Ignore Docker state files
+docker-compose.override.yml
