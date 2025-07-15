@@ -1,26 +1,26 @@
-# ----------- Build React frontend -----------
-FROM node:20 AS frontend
+# ----------- Build React Frontend -----------
+FROM node:18 as frontend-builder
 WORKDIR /app
-COPY weather-app-react/ .
-RUN npm install && npm run build
+COPY weather-app-react/package*.json ./
+RUN npm install
+COPY weather-app-react/ ./
+RUN npm run build
 
-# ----------- Build Spring Boot backend -----------
-FROM eclipse-temurin:17-jdk AS backend
+# ----------- Build Spring Boot Backend JAR -----------
+FROM maven:3.9.6-eclipse-temurin-17 as backend-builder
 WORKDIR /app
-COPY weather-app/ .
-ENV MAVEN_OPTS="-Xmx512m"
-RUN ./mvnw package -DskipTests
+COPY weather-app/pom.xml .
+COPY weather-app/src ./src
+RUN mvn clean package -DskipTests
 
-# ----------- Final image -----------
+# ----------- Final Image -----------
 FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
-# Copy built Spring Boot jar from backend stage
-COPY --from=backend /app/target/*.jar app.jar
+# Copy built JAR
+COPY --from=backend-builder /app/target/*.jar app.jar
 
-# Copy built React static files into Spring Boot's static folder
-RUN mkdir -p /app/public
-COPY --from=frontend /app/build /app/public
+# Copy frontend build output
+COPY --from=frontend-builder /app/build /app/public
 
-# Run the app
 ENTRYPOINT ["java", "-jar", "app.jar"]
