@@ -1,66 +1,31 @@
-# -----------------
-# General
-# -----------------
+# OS files
 *.DS_Store
-*.env
+
+# Environment files (DO NOT COMMIT .envs)
+.env
+.env.*
+
+# Logs
 *.log
 
-# -----------------
-# Frontend (React + Node)
-# -----------------
-frontend/node_modules/
-frontend/build/
-
-# -----------------
-# Backend (Spring Boot / Java)
-# -----------------
-backend/target/
-backend/*.class
-
-# Maven wrapper jar (important to keep)
-!.mvn/wrapper/maven-wrapper.jar
-
-# Maven build directories (ignore all target folders except source folders' exceptions)
-target/
-!**/src/main/**/target/
-!**/src/test/**/target/
-
-# Maven build directories (build folders)
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-# -----------------
-# IDEs
-# -----------------
-
-# IntelliJ IDEA
-.idea/
-*.iws
-*.iml
-*.ipr
-
-# Eclipse / STS
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-# NetBeans
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-# VS Code
-
-# Ignore local build artifacts
+# Backend build artifacts
 weather-app/target/
+*.class
+
+# Frontend build artifacts
 weather-app-react/build/
 
-# Ignore Docker state files
+# Node and Maven dependencies
+**/node_modules/
+**/build/
+**/target/
+
+# IDE files
+.idea/
+*.iml
+.project
+.settings/
+.vscode/
+
+# Docker override (local only)
 docker-compose.override.yml
